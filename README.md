@@ -1,5 +1,5 @@
 # Sobi
-Slightly Optimizing Brainfuck Interpreter
+Slightly Optimizing Brainfuck Interpreter (and debugger, sorta)
 
 Hello world is... <br>
 ```++++++++[>++++[>++>+++>+++>+<<<<-]>+>+>->>+[<]<-]>>.>---.+++++++..+++.>>.<-.<.+++.------.--------.>>+.>++.``` <br>
