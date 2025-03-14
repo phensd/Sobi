@@ -31,15 +31,17 @@ int main(int argc, char *argv[]){
             std::exit(1);
         }
     }else{
-        //todo: add a REPL here maybe?
         std::cerr << "Please input a file to compile & run...\n";
         std::exit(1);
     }
 
     if(bmachine.ops.size() > 0){
+        if(operations) {
+            show_ops(bmachine);
+            std::cerr << "Output of operations: \n";
+        }
         run(bmachine);
         if(cells) show_cells(bmachine);
-        if(operations) show_ops(bmachine);
 
     }else{
         std::cerr << "No operations made from file ... "<< std::quoted(args.at(0)) << ". (Is it empty?) \n";

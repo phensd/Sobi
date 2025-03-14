@@ -1,5 +1,6 @@
 #include "op.h"
 #include <climits>
+#include <iomanip>
 #include <iostream>
 #include "run.h"
 
@@ -22,7 +23,7 @@ void show_cells(machine& machine){
     for(size_t idx {0}; idx < machine.cells.size(); ++idx){
         auto crnt {machine.cells.at(idx)};
         if(idx > 0 && idx % 40 == 0) std::cerr << '\n';
-        std::cerr << (int) crnt << "   ";
+        std::cerr  << (int) crnt << std::setw(4);
     }
     std::cerr << '\n';
 }
