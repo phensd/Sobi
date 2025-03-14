@@ -3,14 +3,14 @@
 #include <cstdint>
 #include <string>
 enum opcode : uint8_t {
-    MPR,
-    MPL,
-    IMC,
-    DMC,
-    OCC,
-    ICC,
-    JPI,
-    JPO
+    MPR,        //move pointer right
+    MPL,        //move pointer left
+    IMC,        //inc. memory cell
+    DMC,        //dec. memory cell
+    OCC,        //output cell as character
+    ICC,        //input to cell as character
+    JPI,        //jump if 0
+    JPO         //jump back if not 0
 };
 
 

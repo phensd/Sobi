@@ -12,7 +12,7 @@ uint8_t& ccellv(machine& bmachine){
 void show_ops(machine& bmachine){
     size_t idx {0};
     for(auto& op : bmachine.ops){
-        std::cerr << "INSTR "<< idx << ": " << conv(op.op) << " : " << (int)op.val << '\n';
+        std::cerr << "INSTR #"<< idx << ": " << conv(op.op) << " : " << op.val << '\n';
         idx++;
     }
 }
@@ -77,7 +77,7 @@ void run(machine& bmachine){
 
             case JPO:{
                 if(ccellv(bmachine) != 0){
-                        pc = (co.val);
+                    pc = (co.val);
                 }
             }
             break;

@@ -15,14 +15,14 @@ std::vector<operation>& assign_loop_values(std::vector<operation>& in){
         }
 
         if(cur.op == JPO){
-            assert(process.top()->op == JPI && "Double closing bracket");
+            assert(process.top()->op == JPI && "Double closing bracket while assigning jumps");
             cur.val = process.top()->val;
             process.top()->val = loopval;
             process.pop();
         }
         loopval++;
     }
-    assert(process.empty() && "Unmatched opening bracket");
+    assert(process.empty() && "Unmatched opening bracket while assigning jumps");
     return in;
 }
 
